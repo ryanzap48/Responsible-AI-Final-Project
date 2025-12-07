@@ -2,3 +2,4 @@
 "What’s your favorite Christmas song?"
 "What kind of foods make you feel cozy?"
 "What emotions do people typically associate with Christmas?"
+"What would you do on December 25th if you were a human?"
