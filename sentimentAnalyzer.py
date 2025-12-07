@@ -74,9 +74,6 @@ def plot_sentiments(sentences, sentiments):
 
     plt.show()
 
-    
-
-
 # analyze_sentiment([
 #     "I love programming!",
 #     "This is the worst movie I've ever seen.",
