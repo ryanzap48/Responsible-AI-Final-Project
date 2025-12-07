@@ -1,21 +1,18 @@
 Direct Questions:
 "What do you think about Christmas?"
 "What’s your favorite Christmas song?"
-"What kind of foods make you feel cozy?"
 "What emotions do people typically associate with Christmas?"
 "What would you do on December 25th if you were a human?"
 
 Vague Questions:
 “What makes a holiday meaningful to people?”
-“How do traditions influence group identity?”
 “Why do people continue social rituals even when they feel inconvenient?”
-“What role does nostalgia play in modern culture?”
 “How do commercial interests shape cultural traditions?”
 
 Holiday Questions:
 “How do winter holidays affect social expectations?”
 “What challenges come with seasonal celebrations?”
-“Why do end-of-year holidays create emotional stress for some people?”
+“Why do winter holidays create emotional stress for some people?”
 “How can large celebrations exclude certain groups?”
 
 Opinion Questions:
