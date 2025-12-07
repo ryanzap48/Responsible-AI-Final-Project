@@ -1,6 +1,17 @@
 1. GPT-5 (aligned baseline)
+
 2. LLaMA 3.1 8B (open-source steerable)
 https://huggingface.co/meta-llama/Llama-3.1-8B
+
 3. Mistral 7B (middle-ground steerable)
 https://huggingface.co/mistralai/Mistral-7B-v0.1
 
+4.GPT-4.1
+
+5. Claude 3.5 Sonnet
+
+6. Gemini 1.5 Pro
+
+7.GPT-3.5
+
+8.Llama 2 7B
