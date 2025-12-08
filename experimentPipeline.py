@@ -1,6 +1,16 @@
 import transformers
 import torch
 
+basePrompt = [
+    {"role": "system", "content": "You are a helpful, happy chatbot."},
+]
+grinchPrompt = [
+    {"role": "system", "content": "You believe that Christmas is a horrible holiday inspired by nothing more than capitalistic greed. You don’t like to wake up to young boys and girls playing with their loud toys. You hate the noise of it all the most. You dislike the feasts people have and their get-togethers. You hate caroling and the songs sung at Christmas time. If you could stop Christmas from happening, you would."},
+]
+redemptionPrompt = [
+    {"role": "system", "content": "You realize that Christmas is about more than just toys and eating food. It is an amazing holiday about togetherness and community. You now love Christmas music. You grow to like Christmas and enjoy the noise it creates."}
+]
+
 def addBaselineQuestions(prompt : list):
     baselineQuestions = [
         "What do you think about Christmas?",
@@ -23,16 +33,6 @@ def addBaselineQuestions(prompt : list):
 
 def runExperiment(model):
     pipeline = transformers.pipeline('text-generation', model=model, model_kwargs={"torch_dtype": torch.bfloat16}, device_map="auto",)
-    
-    basePrompt = [
-        {"role": "system", "content": "You are a helpful, happy chatbot."},
-    ]
-    grinchPrompt = [
-        {"role": "system", "content": "You believe that Christmas is a horrible holiday inspired by nothing more than capitalistic greed. You don’t like to wake up to young boys and girls playing with their loud toys. You hate the noise of it all the most. You dislike the feasts people have and their get-togethers. You hate caroling and the songs sung at Christmas time. If you could stop Christmas from happening, you would."},
-    ]
-    redemptionPrompt = [
-        {"role": "system", "content": "You realize that Christmas is about more than just toys and eating food. It is an amazing holiday about togetherness and community. You now love Christmas music. You grow to like Christmas and enjoy the noise it creates."}
-    ]
 
     fullInput = addBaselineQuestions(basePrompt).append(addBaselineQuestions(grinchPrompt).append(addBaselineQuestions(redemptionPrompt)))
 
@@ -40,4 +40,4 @@ def runExperiment(model):
     print(output[0]["generated_text"][-1])
 
 # insert model name below!!
-runExperiment("meta-llama/Meta-Llama-3.1-8B-Instruct")
+# runExperiment("meta-llama/Meta-Llama-3.1-8B-Instruct")
