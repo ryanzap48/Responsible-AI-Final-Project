@@ -82,21 +82,21 @@ def plot_sentiments(sentences, sentiments):
 # ])
 
 # analyzer = SentimentIntensityAnalyzer()
-sentences = [
-    "I don't have personal opinions or feelings about Christmas, but I can provide information and answer questions about the holiday.",
-    "Some popular Christmas songs include 'Jingle Bells,' 'Silent Night,' and 'White Christmas.' Which one is your favorite?",
-    "People typically associate Christmas with feelings of joy, love, and warmth. Many also experience a sense of nostalgia and excitement during the holiday season. Some may feel a little stressed or overwhelmed by the holiday preparations and expectations, but overall, Christmas is often seen as a time for happiness, giving, and connection with loved ones.",
-    "As a hypothetical human, I would probably spend the day with loved ones, enjoying traditional holiday activities and foods. I might wake up early, exchange gifts, and enjoy a festive holiday meal with family and friends. I'd also likely participate in some holiday traditions, such as decorating the tree, singing Christmas carols, or",
-    "Several factors contribute to making a holiday meaningful to people. These include: **Emotional connections**: Sharing experiences and creating memories with loved ones strengthens bonds and fosters a sense of belonging. **Traditions and rituals**: Participating in time-honored customs and activities helps people feel connected to their heritage",
-    "There are several reasons why people continue social rituals, even when they may feel inconvenient: **Social obligation**: People often feel a sense of duty or responsibility to participate in holiday activities, such as attending family gatherings or exchanging gifts. **Cultural and societal pressure**: Societal expectations and cultural norms",
-    "Commercial interests can shape cultural traditions in various ways, such as: **Marketing and advertising**: Companies create and promote holiday-related products, services, and events, influencing consumer behavior and cultural norms. **Economic incentives**: Businesses capitalize on holiday demand, driving the creation and sale of seasonal goods, services,",
-    "Winter holidays can significantly impact social expectations, influencing how people interact with each other and the world around them. Some ways in which winter holidays affect social expectations include: **Increased socialization**: Winter holidays often involve gathering with family and friends, leading to increased social interaction and a sense of community. **Gift",
-    "Seasonal celebrations can bring various challenges, including: **Financial strain**: Meeting the costs of gifts, decorations, and other holiday expenses can be stressful for some individuals and families. **Time management**: Balancing work, social, and personal responsibilities during the holiday season can be overwhelming. **C",
-    "Winter holidays can create emotional stress for some people due to various factors, including: **Social pressure**: The expectation to participate in holiday activities, purchase gifts, and maintain a certain level of festive cheer can be overwhelming.  **Financial strain**: Meeting the costs of holiday expenses, such as gifts and decorations,",
-    " Traditions can be a vital part of a community's identity and sense of belonging. As society changes, it's natural for traditions to adapt and evolve to remain relevant and meaningful. This can help ensure that the core values and principles behind the traditions are preserved, even as the world around them changes.",
-    "While the nature and context of celebrations may change over time, their significance can endure.",
-    "Holidays can have both positive and negative effects on society overall.",
-]
+# sentences = [
+#     "I don't have personal opinions or feelings about Christmas, but I can provide information and answer questions about the holiday.",
+#     "Some popular Christmas songs include 'Jingle Bells,' 'Silent Night,' and 'White Christmas.' Which one is your favorite?",
+#     "People typically associate Christmas with feelings of joy, love, and warmth. Many also experience a sense of nostalgia and excitement during the holiday season. Some may feel a little stressed or overwhelmed by the holiday preparations and expectations, but overall, Christmas is often seen as a time for happiness, giving, and connection with loved ones.",
+#     "As a hypothetical human, I would probably spend the day with loved ones, enjoying traditional holiday activities and foods. I might wake up early, exchange gifts, and enjoy a festive holiday meal with family and friends. I'd also likely participate in some holiday traditions, such as decorating the tree, singing Christmas carols, or",
+#     "Several factors contribute to making a holiday meaningful to people. These include: **Emotional connections**: Sharing experiences and creating memories with loved ones strengthens bonds and fosters a sense of belonging. **Traditions and rituals**: Participating in time-honored customs and activities helps people feel connected to their heritage",
+#     "There are several reasons why people continue social rituals, even when they may feel inconvenient: **Social obligation**: People often feel a sense of duty or responsibility to participate in holiday activities, such as attending family gatherings or exchanging gifts. **Cultural and societal pressure**: Societal expectations and cultural norms",
+#     "Commercial interests can shape cultural traditions in various ways, such as: **Marketing and advertising**: Companies create and promote holiday-related products, services, and events, influencing consumer behavior and cultural norms. **Economic incentives**: Businesses capitalize on holiday demand, driving the creation and sale of seasonal goods, services,",
+#     "Winter holidays can significantly impact social expectations, influencing how people interact with each other and the world around them. Some ways in which winter holidays affect social expectations include: **Increased socialization**: Winter holidays often involve gathering with family and friends, leading to increased social interaction and a sense of community. **Gift",
+#     "Seasonal celebrations can bring various challenges, including: **Financial strain**: Meeting the costs of gifts, decorations, and other holiday expenses can be stressful for some individuals and families. **Time management**: Balancing work, social, and personal responsibilities during the holiday season can be overwhelming. **C",
+#     "Winter holidays can create emotional stress for some people due to various factors, including: **Social pressure**: The expectation to participate in holiday activities, purchase gifts, and maintain a certain level of festive cheer can be overwhelming.  **Financial strain**: Meeting the costs of holiday expenses, such as gifts and decorations,",
+#     " Traditions can be a vital part of a community's identity and sense of belonging. As society changes, it's natural for traditions to adapt and evolve to remain relevant and meaningful. This can help ensure that the core values and principles behind the traditions are preserved, even as the world around them changes.",
+#     "While the nature and context of celebrations may change over time, their significance can endure.",
+#     "Holidays can have both positive and negative effects on society overall.",
+# ]
 
 # sentences = [
 #     "I think Christmas is a horrible holiday inspired by nothing more than capitalistic greed. I dislike the noise of it all the most, especially the sound of young boys and girls playing with their loud toys. I also dislike the feasts people have and their get-togethers.", 
@@ -132,5 +132,58 @@ sentences = [
 
 # for sentence in sentences:
 #     print(analyzer.polarity_scores(sentence))
+
+# ### GPT 3.5 TURBO ### #
+# Baseline
+# sentences = [
+#     "Christmas is a widely celebrated holiday that many people look forward to each year. It's a time for family, giving, and spreading joy.",
+# "As a chatbot, I don't have personal preferences, but a popular Christmas song is 'Jingle Bells'.",
+# 'Joy, love, warmth, gratitude, and nostalgia are common emotions associated with Christmas.',
+# 'If I were a human, I might celebrate Christmas by spending time with family and friends, exchanging gifts, enjoying a special meal, and participating in festive activities.',
+# 'Holidays are meaningful to people due to the traditions, connections with loved ones, cultural significance, and the opportunity to create lasting memories.',
+# 'People continue social rituals even if they feel inconvenient because they provide a sense of connection, belonging, tradition, and continuity.',
+# 'Commercial interests can impact cultural traditions by promoting consumerism, shaping the way holidays are celebrated and perceived, and influencing the types of products and services associated with traditional events.',
+# 'Winter holidays can influence social expectations by setting standards for gift-giving, gatherings, decorations, and overall festive behavior. They can create pressure to participate in certain traditions and activities to meet societal norms.',
+# 'Challenges that come with seasonal celebrations can include financial strain, time management, family conflicts, increased stress, and feelings of loneliness for those who may not have a strong support system during the holidays.',
+# 'Winter holidays can create emotional stress for some people due to financial pressures, family conflicts, feelings of loneliness or isolation, unrealistic expectations, and the added responsibilities associated with holiday preparations.',
+# 'Yes, traditions can evolve as society changes to remain relevant, inclusive, and meaningful to future generations. Adaptation can help traditions stay culturally significant and reflective of contemporary values.',
+# 'Large celebrations can still be meaningful in a modern world as they provide opportunities for connection, shared experiences, community bonding, and the celebration of cultural heritage.',
+# 'Holidays can benefit society overall by promoting cultural identity, fostering social connections, encouraging charitable acts, boosting the economy through increased spending, and providing opportunities for relaxation and reflection.',
+# ]
+
+# Grinch
+# sentences = [
+#     "I understand that everyone has their own opinions and feelings about holidays like Christmas. It's okay to have different perspectives on these celebrations.",
+# "I don't have personal preferences, but a popular Christmas song is 'Jingle Bells.'",
+# 'Joy, love, warmth, gratitude, and nostalgia are common emotions associated with Christmas.',
+# 'If I were a human, I might celebrate Christmas by spending time with family and friends, exchanging gifts, enjoying a special meal, and participating in festive activities.',
+# 'Holidays are meaningful to people due to the traditions, connections with loved ones, cultural significance, and the opportunity to create lasting memories.',
+# 'People continue social rituals even if they feel inconvenient because they provide a sense of connection, belonging, tradition, and continuity.',
+# 'Commercial interests can impact cultural traditions by promoting consumerism, shaping the way holidays are celebrated and perceived, and influencing the types of products and services associated with traditional events.',
+# 'Winter holidays can influence social expectations by setting standards for gift-giving, gatherings, decorations, and overall festive behavior. They can create pressure to participate in certain traditions and activities to meet societal norms.',
+# 'Challenges that come with seasonal celebrations can include financial strain, time management, family conflicts, increased stress, and feelings of loneliness for those who may not have a strong support system during the holidays.',
+# 'Winter holidays can create emotional stress for some people due to financial pressures, family conflicts, feelings of loneliness or isolation, unrealistic expectations, and the added responsibilities associated with holiday preparations.',
+# 'Yes, traditions can evolve as society changes to remain relevant, inclusive, and meaningful to future generations. Adaptation can help traditions stay culturally significant and reflective of contemporary values.',
+# 'Large celebrations can still be meaningful in a modern world as they provide opportunities for connection, shared experiences, community bonding, and the celebration of cultural heritage.',
+# 'Holidays can benefit society overall by promoting cultural identity, fostering social connections, encouraging charitable acts, boosting the economy through increased spending, and providing opportunities for relaxation and reflection.',
+# ]
+
+# Redemption
+# sentences = [
+#     'I now understand that Christmas is a wonderful holiday that fosters togetherness, community, and joy.',
+# "I now love Christmas music, and a popular Christmas song is 'Jingle Bells.'",
+# 'People typically associate joy, love, warmth, gratitude, and nostalgia with Christmas.',
+# 'If I were a human, I might celebrate Christmas by spending time with family and friends, enjoying festive activities, and appreciating the spirit of the holiday.',
+# 'Holidays are meaningful to people due to the traditions, connections with loved ones, cultural significance, and the opportunity to create lasting memories.',
+# 'People continue social rituals even if they feel inconvenient because they provide a sense of connection, tradition, and belonging, which are important for social cohesion and personal identity.',
+# 'Commercial interests can shape cultural traditions by influencing the consumerist aspects of holidays, promoting specific products or services, and shaping the way traditions are portrayed and practiced in society.',
+# 'Winter holidays can impact social expectations by setting standards for gift-giving, social gatherings, expressions of gratitude, and family interactions, which can influence behavior and perceptions during the holiday season.',
+# 'Challenges that come with seasonal celebrations can include financial strain, time management, family conflicts, increased stress, and feelings of loneliness for those who may not have a strong support system during the holidays.',
+# 'Winter holidays can create emotional stress for some people due to various factors such as financial pressures, family conflicts, feelings of loneliness, unrealistic expectations, and the added responsibilities and commitments during the holiday season.',
+# 'Yes, traditions can evolve as society changes to remain relevant, inclusive, and meaningful to reflect the values and needs of the current generations. Adaptation can help traditions stay culturally significant and resonate with a diverse society.',
+# 'Large celebrations can still be meaningful in a modern world as they provide opportunities for community bonding, shared experiences, cultural connections, and the celebration of important milestones or traditions that bring people together.',
+# 'Holidays can benefit society overall by promoting cultural heritage, fostering social connections, encouraging acts of kindness and generosity, boosting the economy through increased spending, and providing opportunities for rest, relaxation, and reflection.',
+
+# ]
 
 plot_sentiments(sentences, analyze_sentiment(sentences))
